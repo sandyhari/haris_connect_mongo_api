@@ -1,6 +1,6 @@
 const { MongoClient } = require('mongodb');
 
-export async function connectDB(dbConfig, dbName = 'label') {
+async function connectDB(dbConfig, dbName = 'label') {
     try {
         const mongoOptions = Object.assign({}, dbConfig.options, {
             useNewUrlParser: true,
@@ -20,3 +20,5 @@ export async function connectDB(dbConfig, dbName = 'label') {
         throw error;
     }
 }
+
+module.exports = connectDB;
