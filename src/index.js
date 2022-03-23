@@ -1,4 +1,4 @@
-import { MongoClient } from 'mongodb';
+const { MongoClient } = require('mongodb');
 
 export async function connectDB(dbConfig, dbName = 'label') {
     try {
