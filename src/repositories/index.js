@@ -1,4 +1,4 @@
-export default class MongoRepository {
+class MongoRepository {
 
     constructor(database, collectionName) {
         this._database = database;
