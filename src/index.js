@@ -1,4 +1,4 @@
-const { MongoClient } = require('mongodb');
+import { MongoClient } from 'mongodb';
 
 async function connectDB(dbConfig, dbName = 'label') {
     try {
@@ -19,4 +19,4 @@ async function connectDB(dbConfig, dbName = 'label') {
     }
 }
 
-module.exports = connectDB;
+export default connectDB;
