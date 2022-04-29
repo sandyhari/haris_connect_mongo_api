@@ -8,7 +8,7 @@ async function connectDB(dbConfig, dbName = 'label') {
         })
         console.log(`Attempting to establish a connection to ${dbName} mongo db...`);
         const client = await MongoClient.connect(dbConfig.connectionURL, mongoOptions);
-        const dataBaseInstance = client.db();
+        const dataBaseInstance = client.db(dbName);
         console.log('Connection successfully established...');
         return { dataBaseInstance, client };
     }
